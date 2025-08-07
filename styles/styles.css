@@ -1,5 +1,6 @@
-/*We should add accessabilty options*/
-
+/*TODO: We should add accessabilty options*/
+/* TODO: KG can you please make this Look good */
+/* TODO:  */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -23,7 +24,7 @@ img {
 
 section {
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff;
   margin: 20px;
   border-radius: 10px;
 }
@@ -49,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d40;
+  background-color: #685f47;
 }
 
 footer {
