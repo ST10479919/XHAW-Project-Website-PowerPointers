@@ -12,6 +12,11 @@ const coursePrices: CoursePrices = {
   "Garden Maintenance": 750,
 };
 
+function showContent() { 
+  this.setState({visability: 'visable'})
+}
+
+
 const form = document.getElementById('quoteForm') as HTMLFormElement;
 const resultDiv = document.getElementById('quoteResult') as HTMLDivElement;
 

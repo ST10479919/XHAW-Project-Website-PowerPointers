@@ -59,3 +59,11 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+#showHiddenButton {
+  box-shadow: none;
+  border: none;
+}
+
+
+
