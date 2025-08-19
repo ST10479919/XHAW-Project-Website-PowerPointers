@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login — Empowering the Nation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">EN</div>
+      <div>
+        <h1>Empowering the Nation</h1>
+        <small>Account Access</small>
+      </div>
+    </div>
+  </header>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="short-courses.html">6‑Week Courses</a>
+    <a href="long-courses.html">6‑Month Courses</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="quote.html">Quote</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html" aria-current="page">Login</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Login</h2>
+      <p class="note">This is a front‑end demo (no server). Use it to simulate sign‑in.</p>
+      <form id="login-form">
+        <div>
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div>
+          <label for="login-pass">Password</label>
+          <input id="login-pass" type="password" placeholder="••••••••" required />
+        </div>
+        <button class="btn-primary" type="submit">Sign In</button>
+        <p id="login-msg" class="note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2022–2025 Empowering the Nation</footer>
+</body>
+</html>
