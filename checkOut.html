@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Checkout — Empowering the Nation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">EN</div>
+      <div>
+        <h1>Checkout</h1>
+        <small>Choose courses & see your discount</small>
+      </div>
+    </div>
+  </header>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="short-courses.html">6‑Week Courses</a>
+    <a href="long-courses.html">6‑Month Courses</a>
+    <a href="checkout.html" aria-current="page">Checkout</a>
+    <a href="quote.html">Quote</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Build Your Bundle</h2>
+      <p class="note">Select any mix of courses. Discount applies automatically based on how many you pick.</p>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>6‑Week Short Courses (R750 each)</h3>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Child Minding (6‑Week)" value="750"> Child Minding — R750</label>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Cooking (6‑Week)" value="750"> Cooking — R750</label>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Garden Maintenance (6‑Week)" value="750"> Garden Maintenance — R750</label>
+        </div>
+
+        <div class="card">
+          <h3>6‑Month Courses (R1500 each)</h3>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="First Aid (6‑Month)" value="1500"> First Aid — R1500</label>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Sewing (6‑Month)" value="1500"> Sewing — R1500</label>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Landscaping (6‑Month)" value="1500"> Landscaping — R1500</label>
+          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Life Skills (6‑Month)" value="1500"> Life Skills — R1500</label>
+        </div>
+      </div>
+
+      <div class="totals" style="margin-top:16px">
+        <p class="discount-kicker kicker"></p>
+        <ul class="selection-list"></ul>
+        <p>Total before discount: <strong class="total-before">R0.00</strong></p>
+        <p>Discount: <strong class="discount-line">0% — R0.00</strong></p>
+        <p>Final total: <strong class="final-total">R0.00</strong></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Secure Your Spot</h3>
+      <form>
+        <div class="grid cols-2">
+          <div>
+            <label for="fullname">Full Name</label>
+            <input id="fullname" type="text" placeholder="Full Name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="+27 ..." />
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input id="city" type="text" placeholder="Johannesburg" />
+          </div>
+        </div>
+        <button class="btn-primary" type="button" onclick="alert('Thank you! This is a demo — no payment processed.')">Submit (Demo)</button>
+      </form>
+      <p class="note">This is a demo front‑end. Connect to your preferred payment provider when ready.</p>
+    </section>
+  </main>
+
+  <footer>© 2022–2025 Empowering the Nation</footer>
+</body>
+</html>
