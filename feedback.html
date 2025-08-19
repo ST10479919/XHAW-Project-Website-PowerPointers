@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Feedback — Empowering the Nation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">EN</div>
+      <div>
+        <h1>We Value Your Feedback</h1>
+        <small>Help us improve our training</small>
+      </div>
+    </div>
+  </header>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="short-courses.html">6‑Week Courses</a>
+    <a href="long-courses.html">6‑Month Courses</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="quote.html">Quote</a>
+    <a href="feedback.html" aria-current="page">Feedback</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Tell Us What You Think</h2>
+      <form>
+        <div class="grid cols-2">
+          <div>
+            <label for="f-name">Full Name</label>
+            <input id="f-name" type="text" placeholder="Full Name" required />
+          </div>
+          <div>
+            <label for="f-email">Email</label>
+            <input id="f-email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <label for="f-course">Which course did you attend?</label>
+        <select id="f-course">
+          <option>First Aid (6‑Month)</option>
+          <option>Sewing (6‑Month)</option>
+          <option>Landscaping (6‑Month)</option>
+          <option>Life Skills (6‑Month)</option>
+          <option>Child Minding (6‑Week)</option>
+          <option>Cooking (6‑Week)</option>
+          <option>Garden Maintenance (6‑Week)</option>
+        </select>
+
+        <label for="f-rating">Overall rating</label>
+        <select id="f-rating" required>
+          <option value="">Select…</option>
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Average</option>
+          <option>Poor</option>
+        </select>
+
+        <label for="feedback-text">Comments</label>
+        <textarea id="feedback-text" maxlength="1000" placeholder="Your experience, suggestions, or thanks…"></textarea>
+        <p id="char-count" class="note"></p>
+
+        <button class="btn-primary" type="button" onclick="alert('Thank you for your feedback! (demo)')">Submit Feedback (Demo)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2022–2025 Empowering the Nation</footer>
+</body>
+</html>
