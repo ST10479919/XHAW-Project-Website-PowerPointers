@@ -37,6 +37,7 @@ function updateCheckoutSummary(container=document){
   const listEl = $('.selection-list', container); // ul element for listing selected courses
   const totalEl = $('.total-before', container); // span element for subtotal
   const discEl  = $('.discount-line', container); // span element for discount amount
+  const vatEl = $('.vat-amount', container); // span element for vat
   const finalEl = $('.final-total', container); // span element for final total
   
 
@@ -45,10 +46,11 @@ function updateCheckoutSummary(container=document){
   const items = getSelectedCourses(container); // Get selected courses
   const count = items.length; // Number of selected courses
   const subtotal = items.reduce((a,c)=>a+c.price,0); // Sum of prices
-  const vatRate = 0.15 * subtotal; // VAT amount (15% of subtotal)
   const rate = computeDiscount(count); // Discount rate based on count
   const discount = subtotal * rate; // Discount amount 
-  const finalTotal = (subtotal - discount) + vatRate; // Final total after discount
+  const discountedCost = subtotal - discount; // Discounted cost
+  const vat = discountedCost * 0.15; // VAT amount
+  const finalTotal = discountedCost + vat; // Final total
  
 
   // Render selection list
