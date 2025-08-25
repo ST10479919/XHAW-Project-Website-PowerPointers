@@ -36,27 +36,29 @@
       <form id="quote-form">
         <div class="grid cols-2">
           <div>
-            <label for="q-name">Full Name</label>
-            <input id="q-name" type="text" required placeholder="Full Name" />
+            <label for="q-name"> Name</label>
+            <input id="q-name" type="text" placeholder="Name" />
+          </div>
+          <div>
+            <label for="q-surname"> Surname</label>
+            <input id="q-surname" type="text" required placeholder="Surname" />
           </div>
           <div>
             <label for="q-email">Email</label>
             <input id="q-email" type="email" required placeholder="you@example.com" />
           </div>
           <div>
-            <label for="q-role">I am a(n)</label>
-            <select id="q-role">
-              <option>Employer</option>
-              <option>Employee</option>
-              <option>Other</option>
+            <label for="q-gender">Gender</label>
+            <select id="q-gender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Rather not say</option>
             </select>
-          </div>
-          <div>
-            <label for="q-learners">Number of Learners</label>
-            <input id="q-learners" type="number" min="1" value="1" />
           </div>
         </div>
 
+        <!-- i Worked on a Calculator/Quote Page on Monday and this is what i came up with
+         i had to implement a bit of JS to get  in functioning but it works well and is pretty smooth -->
         <h3>Courses Required</h3>
         <div class="grid cols-2">
           <div class="card">
