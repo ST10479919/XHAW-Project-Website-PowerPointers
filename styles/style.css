@@ -130,3 +130,13 @@ footer{
   border-radius: var(--radius);
   margin-bottom: 12px;
 }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card-link:hover .card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
