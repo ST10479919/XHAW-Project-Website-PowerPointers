@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <title>6 Week Short Courses — Empowering the Nation</title>
-  <!-- I added all of teh 6 week courses here just we can have less to look at
-   other than proof reading thats all we have to do -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles/style.css" />
   <script defer src="script.js"></script>
@@ -32,49 +30,57 @@
 
   <main class="container">
     <section class="grid cols-3">
-      <article class="card course">
-        <span class="badge">Short Course • R750</span>
-        <h3>Child Minding</h3>
-        <p><strong>Purpose:</strong> Basic child and baby care.</p>
-        <ul class="detail-list">
-          <li>Birth to 6 month needs</li>
-          <li>7 month to 1 year needs</li>
-          <li>Toddler needs</li>
-          <li>Educational toys</li>
-        </ul>
-      </article>
 
-      <article class="card course">
-        <span class="badge">Short Course • R750</span>
-        <h3>Cooking</h3>
-        <p><strong>Purpose:</strong> Prepare and cook nutritious family meals.</p>
-        <ul class="detail-list">
-          <li>Nutritional requirements</li>
-          <li>Proteins, carbohydrates, vegetables</li>
-          <li>Meal planning</li>
-          <li>Recipes; preparation and cooking</li>
-        </ul>
-      </article>
+      <a href="childMindingCourse.html" class="card-link">
+        <article class="card course">
+          <span class="badge">Short Course • R750</span>
+          <h3>Child Minding</h3>
+          <p><strong>Purpose:</strong> Basic child and baby care.</p>
+          <ul class="detail-list">
+            <li>Birth to 6 month needs</li>
+            <li>7 month to 1 year needs</li>
+            <li>Toddler needs</li>
+            <li>Educational toys</li>
+          </ul>
+        </article>
+      </a>
 
-      <article class="card course">
-        <span class="badge">Short Course • R750</span>
-        <h3>Garden Maintenance</h3>
-        <p><strong>Purpose:</strong> Watering, pruning, planting in a domestic garden.</p>
-        <ul class="detail-list">
-          <li>Water restrictions & plant needs</li>
-          <li>Pruning & propagation</li>
-          <li>Planting techniques by type</li>
-        </ul>
-      </article>
+      <a href="cookingCourse.html" class="card-link">
+        <article class="card course">
+          <span class="badge">Short Course • R750</span>
+          <h3>Cooking</h3>
+          <p><strong>Purpose:</strong> Prepare and cook nutritious family meals.</p>
+          <ul class="detail-list">
+            <li>Nutritional requirements</li>
+            <li>Proteins, carbohydrates, vegetables</li>
+            <li>Meal planning</li>
+            <li>Recipes; preparation and cooking</li>
+          </ul>
+        </article>
+      </a>
+
+      <a href="gardenCourse.html" class="card-link">
+        <article class="card course">
+          <span class="badge">Short Course • R750</span>
+          <h3>Garden Maintenance</h3>
+          <p><strong>Purpose:</strong> Watering, pruning, planting in a domestic garden.</p>
+          <ul class="detail-list">
+            <li>Water restrictions & plant needs</li>
+            <li>Pruning & propagation</li>
+            <li>Planting techniques by type</li>
+          </ul>
+        </article>
+      </a>
+
     </section>
 
     <section class="card">
       <h3>Add to Checkout</h3>
       <p class="note">Tick courses and then open <a href="checkout.html">Checkout</a> to view totals & discounts.</p>
       <form>
-        <label><input class="course-checkbox" type="checkbox" name="course" id="childminding" data-title="Child Minding (6‑Week)" value="750"> Child Minding — R750</label>
-        <label><input class="course-checkbox" type="checkbox" name="course" id="cooking" data-title="Cooking (6‑Week)" value="750"> Cooking — R750</label>
-        <label><input class="course-checkbox" type="checkbox" name="course" id="garden-maintenance" data-title="Garden Maintenance (6‑Week)" value="750"> Garden Maintenance — R750</label>
+        <label for="childminding"><input class="course-checkbox" type="checkbox" name="course" id="childminding" data-title="Child Minding (6-Week)" value="750"> Child Minding — R750</label>
+        <label for="cooking"><input class="course-checkbox" type="checkbox" name="course" id="cooking" data-title="Cooking (6-Week)" value="750"> Cooking — R750</label>
+        <label for="garden-maintenance"><input class="course-checkbox" type="checkbox" name="course" id="garden-maintenance" data-title="Garden Maintenance (6-Week)" value="750"> Garden Maintenance — R750</label>
       </form>
       <div class="totals" style="margin-top:12px">
         <p class="discount-kicker kicker"></p>
