@@ -10,6 +10,7 @@ const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
  2 courses: 5%
  3 courses: 10%
  4+ courses: 15%
+ VAT inclusive (15%)
 */
 function computeDiscount(courseCount){
   if(courseCount <= 1) return 0; // Only one course
@@ -36,7 +37,9 @@ function updateCheckoutSummary(container=document){
   const listEl = $('.selection-list', container); // ul element for listing selected courses
   const totalEl = $('.total-before', container); // span element for subtotal
   const discEl  = $('.discount-line', container); // span element for discount amount
+  const vatEl = $('.vat-amount', container); // span element for vat
   const finalEl = $('.final-total', container); // span element for final total
+  
 
   if(!listEl || !totalEl || !discEl || !finalEl) return;
 
@@ -45,7 +48,10 @@ function updateCheckoutSummary(container=document){
   const subtotal = items.reduce((a,c)=>a+c.price,0); // Sum of prices
   const rate = computeDiscount(count); // Discount rate based on count
   const discount = subtotal * rate; // Discount amount 
-  const finalTotal = subtotal - discount; // Final total after discount
+  const discountedCost = subtotal - discount; // Discounted cost
+  const vat = discountedCost * 0.15; // VAT amount
+  const finalTotal = discountedCost + vat; // Final total
+ 
 
   // Render selection list
   listEl.innerHTML = (count === 0) // No items selected
