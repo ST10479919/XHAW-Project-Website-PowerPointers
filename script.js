@@ -63,7 +63,7 @@ function updateCheckoutSummary(container=document){
     else if(rate === 0 && count === 0) kicker.textContent = 'Pick any course(s) to see your discount.'; // 0 courses
     else if(rate === 0.05) kicker.textContent = 'Nice! You got 5% off.'; // 2 courses
     else if(rate === 0.10) kicker.textContent = 'Great choice! 10% discount applied.'; // 3 courses
-    else if(rate >= 0.15) kicker.textContent = 'You unlocked the maximum 15% discount!'; // 4+ courses 
+    else if(rate >= 0.15) kicker.textContent = 'You unlocked the maximum 15% discount!'; // 4+ courses
     else kicker.textContent = ''; // Fallback (This should not happen)
   }
 }
