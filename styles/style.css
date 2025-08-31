@@ -1,4 +1,11 @@
 /* ==============  Empowering the Nation — Global Styles  ================== */
+
+/* TODO: seperate css styles 
+
+  We should use this file for global styles like containers, typography, colors, etc.
+
+*/
+
 :root{
   --brand-ink:#0B2E4E;
   --brand-accent:#1D6FD6;
@@ -95,6 +102,7 @@ button{
   appearance:none;border:0;border-radius:12px;
   padding:12px 16px;font-weight:800;cursor:pointer
 }
+/* We need to change the button styles. Maybe place in as a box? */
 .btn-primary{background:var(--brand-accent);color:#fff}
 .btn-primary:hover{filter:brightness(.95)}
 .btn-ghost{background:#fff;border:1px solid #D7DFEA}
