@@ -117,3 +117,51 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const loginForm = $('#login-form'); // Login form element
   if(loginForm){ loginForm.addEventListener('submit', mockLogin); }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const checkboxes = document.querySelectorAll(".course-checkbox");
+  const totalBeforeEl = document.querySelector(".total-before");
+  const vatLineEl = document.querySelector(".vat-line");
+  const discountLineEl = document.querySelector(".discount-line");
+  const finalTotalEl = document.querySelector(".final-total");
+  const kickerEl = document.querySelector(".discount-kicker");
+  const selectionList = document.querySelector(".selection-list");
+
+  checkboxes.forEach(cb => cb.addEventListener("change", updateTotals));
+
+  function updateTotals() {
+    let subtotal = 0;
+    let count = 0;
+    selectionList.innerHTML = "";
+
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        subtotal += parseFloat(cb.value);
+        count++;
+        const li = document.createElement("li");
+        li.textContent = cb.dataset.title + " — R" + parseFloat(cb.value).toFixed(2);
+        selectionList.appendChild(li);
+      }
+    });
+
+    // VAT at 15%
+    let vat = subtotal * 0.15;
+
+    // Discount logic
+    let discountRate = 0;
+    if (count >= 7) discountRate = 0.15;
+    else if (count >= 5) discountRate = 0.10;
+    else if (count >= 3) discountRate = 0.05;
+
+    const discountAmount = (subtotal + vat) * discountRate;
+    const finalTotal = subtotal + vat - discountAmount;
+
+    // Update DOM
+    totalBeforeEl.textContent = "R" + subtotal.toFixed(2);
+    vatLineEl.textContent = "R" + vat.toFixed(2);
+    discountLineEl.textContent = `${(discountRate * 100).toFixed(0)}% — R${discountAmount.toFixed(2)}`;
+    finalTotalEl.textContent = "R" + finalTotal.toFixed(2);
+
+    kickerEl.textContent = count > 0 ? `You selected ${count} course(s).` : "";
+  }
+});
