@@ -7,7 +7,7 @@ A website to provide courses for domestic workers, focusing on local communities
   
   This is the Intro to Git
   
-  1. Start everybranch with an issue. Only work on that issue.
+  1. Start every branch with an issue. Only work on that issue.
   2. Start every branch from main.
   3. Write Tests.
   4. Create pull requests to evaluate code.
