@@ -92,13 +92,13 @@ function mockLogin(e){ // Simulate login process
     msg.style.color = '#1F8A5B';
   }else{ 
     msg.textContent = 'Please enter your email.'; // Prompt for email
-    msg.style.color = '#B12A2A'; 
+    msg.style.color = '#B12A2A';
   }
 }
 
 // Feedback form: character counter
 function bindFeedbackCounter(){ // Works on contact.html
-  const ta = $('#feedback-text'); // Textarea element
+  const ta = $('#feedback-text'); // Text area element
   const out = $('#char-count'); // Output element
   if(!ta || !out) return; // Exit if elements not found
   const max = Number(ta.getAttribute('maxlength')||1000); // Get maxlength or default to 1000
