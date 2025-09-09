@@ -1,0 +1,21 @@
+/* Hey guys, so this is where i will be doing all button styling including animations and such. let me know your thoughts.*/
+/*This is of course usable for whatever we need but yeah, let me know. This is currently Jaco's palette.*/
+.explr-btn {
+    text-decoration: none;
+    color: #f5f5dc;
+    size: 12px;
+    background-color: #2f2f2f;
+    text-align: center;
+    font-weight: bold;
+}
+.explr-btn:hover {
+    transform: scale(1.13); 
+    transition: 1.0s;
+}
+.explr-btn:active {
+    transform: scale(0.5);
+}
+/* We need to change the button styles. Maybe place in as a box? */
+.btn-primary{background:var(--brand-accent);color:#fff}
+.btn-primary:hover{filter:brightness(.95)}
+.note{color:var(--muted);font-size:.95rem}
