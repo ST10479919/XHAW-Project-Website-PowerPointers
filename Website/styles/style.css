@@ -24,14 +24,14 @@
 html,body{margin:0;padding:0}
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background:var(--bg);
+  background: #f5f5DC;
   color:var(--text);
   line-height:1.55;
 }
 
 /* Header / Nav */
 .site-header{
-  background:linear-gradient(135deg,var(--brand-ink),#081C2F);
+  background:linear-gradient(135deg,var(--brand-ink),#059669);/*Using Jaco's palette*/
   color:#fff;
   padding:28px 16px 22px;
   text-align:center;
@@ -102,11 +102,7 @@ button{
   appearance:none;border:0;border-radius:12px;
   padding:12px 16px;font-weight:800;cursor:pointer
 }
-/* We need to change the button styles. Maybe place in as a box? */
-.btn-primary{background:var(--brand-accent);color:#fff}
-.btn-primary:hover{filter:brightness(.95)}
-.btn-ghost{background:#fff;border:1px solid #D7DFEA}
-.note{color:var(--muted);font-size:.95rem}
+
 
 /* Calculator / totals */
 .totals{
