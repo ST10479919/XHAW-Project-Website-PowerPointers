@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   updateCheckoutSummary(document); // Initial summary update
   bindFeedbackCounter(); // Bind feedback character counter 
   const loginForm = $('#login-form'); // Login form element
-  if(loginForm){ loginForm.addEventListener('submit', mockLogin); }
+  if(loginForm){ loginForm.addEventListener('submit', mockLogin); } // Attach mock login handler if form exists
 });
 
 document.addEventListener("DOMContentLoaded", () => {
