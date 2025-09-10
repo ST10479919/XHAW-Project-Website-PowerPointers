@@ -1,16 +1,34 @@
-# XHAW-Project-Website-PowerPointers
-A website to provide courses for domestic workers, focusing on local communities.
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link href="https://fonts/googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  
-  This is the Intro to Git
-  
-  1. Start every branch with an issue. Only work on that issue.
-  2. Start every branch from main.
-  3. Write Tests.
-  4. Create pull requests to evaluate code.
-  5. Merge into main after fixing conflicts.
-  6. Add more issues to GitHib.
-  
+# XHAW-Project-Website-PowerPointers
+
+A website to provide courses for domestic workers, focusing on local communities.
+## Features
+
+- Selection of courses for domestic work 
+- Assistance on selecting courses
+- Calculator for adding the total value
+
+## FAQ
+
+#### Is the app requred?
+No, everything is avalible on the website itself, and vice-versa
+
+#### Are discounts offered?
+Yes, depending on the amount of courses selected a discount is given.
+
+#### Is VAT being added?
+Yes, it is indicated in the checkout
+## Screenshots
+
+<img width="1902" height="915" alt="Homepage" src="https://github.com/user-attachments/assets/104b20f5-8bcc-4890-92ca-db6842170f68" />
+
+
+
+## Authors
+
+Kgomotso Mbele ST10467825 
+
+Moe-aath Adonis ST10494032
+
+Petrus Venter ST10479919
+
