@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
         padding: 10,
         alignItems: 'center',
         justifyContent: 'center',
+
     },
 
     image: {
@@ -17,11 +18,23 @@ export const styles = StyleSheet.create({
         height: 250,
         padding: 10,
         marginLeft: 25,
+        
     },
 
     groupButtons: {
         flexDirection: 'row',
         gap: 10,
+        
+    },
+
+    inputBox: {
+        borderColor: 'black',
+        borderWidth: 1,
+        padding: 10,
+        textAlign: "center",
+        marginVertical: 5,
+        borderRadius: 5,
+        minWidth: 250,
     },
 
     button: {
