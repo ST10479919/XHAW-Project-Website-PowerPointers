@@ -9,7 +9,7 @@ export type Course = {
 export type CourseType = "6-Months" | "6-Weeks";
 
 // Data for courses
-const coursesData: Record<CourseType, Course[]> = {
+export const coursesData: Record<CourseType, Course[]> = {
     "6-Months": [
         {
             title: "First Aid", 

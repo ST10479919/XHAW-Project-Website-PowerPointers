@@ -6,11 +6,14 @@ import CoursesScreen from '../screens/CoursesScreen';
 import DetailedScreen from '../screens/CourseDetailScreen';
 import AboutScreen from '../screens/AboutScreen';
 import LoginScreen from '../screens/LoginScreen';
+import CartScreen from '../screens/CartScreen';
+import { Course, CourseType } from '../services/courses';
 
 export type RootStackParamList = {
     Home: undefined;
-    Courses: { courseType: string };
-    Detailed: { courseId: string };
+    Courses: { courseType: "6-Months" | "6-Weeks" };
+    Detailed: { course: Course; courseType: "6-Months" | "6-Weeks" };
+    Cart: undefined;
     About: undefined;
     Login: undefined;
 }
@@ -25,6 +28,7 @@ enableScreens(true);
             <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Welcome' }} />
             <Stack.Screen name="Courses" component={CoursesScreen} options={{ title: 'Courses' }} />
             <Stack.Screen name="Detailed" component={DetailedScreen} options={{ title: 'Course Details' }} />
+            <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Your Cart' }} />
             <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About Us' }} />
             <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login' }} />
         </Stack.Navigator>

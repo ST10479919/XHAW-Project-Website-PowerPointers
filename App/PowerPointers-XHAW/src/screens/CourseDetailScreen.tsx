@@ -1,14 +1,43 @@
 import React, { useState } from "react";
-import { ActivityIndicator, Text, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, Text, TouchableOpacity, View, ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/AppNavigator";
 import { styles } from "../styles/styles";
+import { coursesData, CourseType, Course } from "../services/courses";
 
-export default function DetailedScreen() {
+type Props = NativeStackScreenProps<RootStackParamList, "Detailed">;
+
+
+export default function DetailedScreen({ route, navigation }: Props ) {
+    const { course, courseType } = route.params;
+
     return (
-        <View>
-            <Text>Detailed Screen</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                              <Text style={styles.courseTitle}>{course.title}</Text>
+                <Text style={styles.courseType}>{courseType}</Text>
+                
+                <View style={styles.textSection}>
+                    <Text style={styles.sectionTitle}>Purpose</Text>
+                    <Text style={styles.sectionContent}>{course.purpose}</Text>
+                </View>
+                
+                <View style={styles.textSection}>
+                    <Text style={styles.sectionTitle}>Description</Text>
+                    <Text style={styles.sectionContent}>{course.description}</Text>
+                </View>
+                
+                <View style={styles.textSection}>
+                    <Text style={styles.sectionTitle}>Course Content</Text>
+                    <Text style={styles.sectionContent}>{course.content}</Text>
+                </View>
+                
+                <View style={styles.textSection}>
+                    <Text style={styles.sectionTitle}>Price</Text>
+                    <Text style={styles.price}>R {course.price}</Text>
+                    </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 }

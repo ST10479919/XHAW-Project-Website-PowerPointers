@@ -6,12 +6,12 @@ import {
   View,
   Image,
   Pressable,
+  BackHandler,
 } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/AppNavigator";
 import { styles } from "../styles/styles";
-import { StyleSheet } from "react-native";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Home">;
 
@@ -24,11 +24,9 @@ export default function HomeScreen({ navigation }: Props) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Pressable onPress ={() => {
-          navigation.navigate("About");
-        }}>
+
         <Image source={require("../../assets/img/WebsiteLogoTrans.png")} style={styles.image} />
-        </Pressable>
+        
       </View>
 
       <View style={styles.container}>
@@ -53,12 +51,18 @@ export default function HomeScreen({ navigation }: Props) {
         </View>
 
         <Pressable style={styles.button} onPress={() => {
-
+          navigation.navigate("Cart");
         }}>
           <Text>Cart</Text>
         </Pressable>
-
-        <Pressable style={styles.button} onPress={() => {}}>
+        <Pressable style={styles.button} onPress ={() => {
+          navigation.navigate("About");
+        }}>
+          <Text>About Us</Text>
+        </Pressable>
+        <Pressable style={styles.button} onPress={() => {
+          BackHandler.exitApp();
+        }}>
           <Text>Exit</Text>
         </Pressable>
       </View>
