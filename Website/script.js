@@ -60,7 +60,6 @@ function updateCheckoutSummary(container=document){
 
   totalEl.textContent = formatRand(subtotal); // Show subtotal 
   discEl.textContent  = `${(rate*100).toFixed(0)}% — ${formatRand(discount)}`; // Show discount rate & amount
-  // TODO: add display for vat amount added
   finalEl.textContent = formatRand(finalTotal); // Show final total
   
   // Also show a friendly kicker line if applicable
@@ -149,9 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Discount logic
     let discountRate = 0;
-    if (count >= 7) discountRate = 0.15;
-    else if (count >= 5) discountRate = 0.10;
-    else if (count >= 3) discountRate = 0.05;
+    if (count >= 4) discountRate = 0.15;
+    else if (count >= 3) discountRate = 0.10;
+    else if (count >= 2) discountRate = 0.05;
+
 
     const discountAmount = (subtotal + vat) * discountRate;
     const finalTotal = subtotal + vat - discountAmount;

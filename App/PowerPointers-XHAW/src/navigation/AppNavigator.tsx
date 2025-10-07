@@ -6,7 +6,7 @@ import CoursesScreen from '../screens/CoursesScreen';
 import DetailedScreen from '../screens/CourseDetailScreen';
 import AboutScreen from '../screens/AboutScreen';
 import LoginScreen from '../screens/LoginScreen';
-import CartScreen from '../screens/CartScreen';
+import CartScreen from '../screens/CartScreen'
 import { Course, CourseType } from '../services/courses';
 
 export type RootStackParamList = {

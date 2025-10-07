@@ -49,12 +49,12 @@ export default function LoginScreen({ navigation }: Props) {
         <Pressable style={styles.button} onPress={() => {
             demoAlert();
         }}>
-          <Text>Sign in</Text>
+          <Text style={{color:"#fff"}}>Sign in</Text>
         </Pressable>
         <Pressable style={styles.button} onPress={() => {
             demoAlert();
         }}>
-          <Text>Create user</Text>
+          <Text style={{color:"#fff"}}>Create user</Text>
         </Pressable>
       </View>
 
@@ -62,7 +62,7 @@ export default function LoginScreen({ navigation }: Props) {
         <Pressable style={styles.button} onPress={() => {
             navigation.goBack();
         }}>
-          <Text>Go back</Text>
+          <Text style={{color:"#fff"}}>Go back</Text>
         </Pressable>
       </View>
 

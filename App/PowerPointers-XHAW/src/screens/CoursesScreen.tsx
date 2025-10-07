@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ActivityIndicator, Text, TouchableOpacity, View, FlatList } from "react-native";
+import { ActivityIndicator, Text, TouchableOpacity, View, FlatList, Pressable } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/AppNavigator";
@@ -15,7 +15,7 @@ export default function CoursesScreen( { navigation, route }: Props) {
     const courses = coursesData[courseType as CourseType];
 
 
-   const renderCourseItem = ({ item }: { item: Course }) => (
+   const renderCourseItems = ({ item }: { item: Course }) => (
         <TouchableOpacity 
             style={styles.courseItem}
             onPress={() => {
@@ -37,10 +37,17 @@ export default function CoursesScreen( { navigation, route }: Props) {
             
             <FlatList
                 data={courses}
-                renderItem={renderCourseItem}
+                renderItem={renderCourseItems}
                 keyExtractor={(item, index) => index.toString()}
                 showsVerticalScrollIndicator={false}
             />
+            <Pressable
+                style={styles.button} 
+                onPress={navigation.goBack}
+                >
+                <Text style={{color:"#fff"}}>Go back</Text>
+            </Pressable>
+
         </SafeAreaView>
     );
 }

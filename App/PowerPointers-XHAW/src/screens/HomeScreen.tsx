@@ -33,37 +33,37 @@ export default function HomeScreen({ navigation }: Props) {
         <Pressable style={styles.button} onPress={() => {
           navigation.navigate("Login");
         }}>
-          <Text>Login</Text>
+          <Text style={{color:"#fff"}}>Login</Text>
         </Pressable>
 
         <View style={styles.groupButtons}>
           <Pressable style={styles.button} onPress={() => {
             navigation.navigate("Courses", { courseType: "6-Months" });
           }}>
-            <Text>6-Months</Text>
+            <Text style={{color:"#fff"}}>6-Months</Text>
           </Pressable>
 
           <Pressable style={styles.button} onPress={() => {
             navigation.navigate("Courses", { courseType: "6-Weeks" });
           }}>
-            <Text>6-Weeks</Text>
+            <Text style={{color:"#fff"}}>6-Weeks</Text>
           </Pressable>
         </View>
 
         <Pressable style={styles.button} onPress={() => {
           navigation.navigate("Cart");
         }}>
-          <Text>Cart</Text>
+          <Text style={{color:"#fff"}}>Cart</Text>
         </Pressable>
         <Pressable style={styles.button} onPress ={() => {
           navigation.navigate("About");
         }}>
-          <Text>About Us</Text>
+          <Text style={{color:"#fff"}}>About Us</Text>
         </Pressable>
         <Pressable style={styles.button} onPress={() => {
           BackHandler.exitApp();
         }}>
-          <Text>Exit</Text>
+          <Text style={{color:"#fff"}}>Exit</Text>
         </Pressable>
       </View>
     </SafeAreaView>

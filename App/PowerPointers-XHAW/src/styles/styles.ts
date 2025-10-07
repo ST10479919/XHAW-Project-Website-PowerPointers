@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 // Global styles
 
 export const styles = StyleSheet.create({
+    
     container: {
         flex: 1,
         flexDirection: 'column',
@@ -41,24 +42,24 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
-    color: "white",
+    color:"#fff",
     backgroundColor: "#4395d8ff",
     padding: 10,
     borderRadius: 5,
     minWidth: 100,
     },
+    
 
-
-// Test
+// Course styles
     courseItem: {
-        backgroundColor: '#f9f9f9',
-        padding: 15,
-        marginVertical: 8,
-        marginHorizontal: 16,
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#ddd',
-        minWidth: 300,
+    backgroundColor: '#f9f9f9',
+    marginVertical: 8,
+    marginHorizontal: 16,
+    padding: 15,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    minWidth: 300,
     },
     courseTitle: {
         fontSize: 18,
@@ -115,6 +116,34 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 15,
     },
+    cartItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#f9f9f9',
+    padding: 15,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ddd'
+    },
+    
+    cartItemInfo: {
+    flex: 1,
+    },
 
+    costSection: {
+    marginBottom: 1,
+    },
+    costDisplay: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 5,
+    },
 });
 
+export const courses = StyleSheet.create ({
+
+
+});
