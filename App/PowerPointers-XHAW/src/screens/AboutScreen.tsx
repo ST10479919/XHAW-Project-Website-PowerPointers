@@ -6,15 +6,28 @@ import {
   TouchableOpacity,
   View,
   ScrollView,
+  StyleSheet,
 } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/AppNavigator";
+import { Dropdown } from "react-native-element-dropdown";
 import { styles } from "../styles/styles";
+
 
 type Props = NativeStackScreenProps<RootStackParamList, "About">;
 
 export default function AboutScreen({ navigation }: Props) {
+
+  const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
+
+  const locations = [
+    { label: "Johannesburg", value: '0'},
+    { label: "Cape-Town", value: '1'},
+    { label: "Pretoria", value: "2" },
+  ]
+
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -30,6 +43,24 @@ export default function AboutScreen({ navigation }: Props) {
             completed our six month Learnerships and six week Short Skills
             Training Programs.
           </Text>
+        </View>
+        <View style={styles.courseItem}>
+            <Text style={styles.sectionTitle}> Centers near you </Text>
+            <Text style={styles.sectionContent}> Select the location you are closest to and we'll send you email of the closest training centre</Text>
+            {/* (Hoaphantn7604, n.d.) */}
+            <Dropdown
+              style={dropdown.box}
+              placeholderStyle={dropdown.placeholder}
+              selectedTextStyle={dropdown.selectedText}
+              data={locations}
+              labelField="label"
+              valueField="value"
+              placeholder="Select your city"
+              value={selectedLocation}
+              onChange={item => {
+                setSelectedLocation(item.value)
+              }}
+            />
         </View>
         <View style={styles.courseItem}>
           <Text style={styles.sectionTitle}>What We Offer</Text>
@@ -53,3 +84,32 @@ export default function AboutScreen({ navigation }: Props) {
     </SafeAreaView>
   );
 }
+
+const dropdown = StyleSheet.create({
+  box: {
+    height: 50,
+    borderColor: '#6e6e6eff',
+    borderWidth: 0.5,
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    marginTop: 15,
+    backgroundColor: '#f9f9f9',
+  },
+
+  placeholder: {
+    color: '#999'
+  },
+  selectedText: {
+    color: '#333'
+  },
+
+  selectedCity: {
+    marginTop: 15,
+    padding: 10,
+    backgroundColor: '#e8f4ff',
+    borderRadius: 5,
+    borderLeftWidth: 4,
+    borderLeftColor: '#4395d8ff',
+  },
+
+});
