@@ -12,6 +12,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/AppNavigator";
 import { Dropdown } from "react-native-element-dropdown";
+
 import { styles } from "../styles/styles";
 
 
@@ -77,9 +78,12 @@ export default function AboutScreen({ navigation }: Props) {
           <Text style={styles.sectionTitle}>Why It Matters</Text>
           <Text style={styles.sectionContent}>Employers gain confidence and value from skilled staff; employees gain dignity, mobility, and better pay. Everyone wins when skills grow. </Text>
         </View>
+        
+        <View style={styles.container}>
         <Pressable style={styles.button} onPress={() => navigation.goBack()}>
           <Text style={{color:"#fff"}}> Go Back </Text>
         </Pressable>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

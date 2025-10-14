@@ -6,7 +6,8 @@ import CoursesScreen from '../screens/CoursesScreen';
 import DetailedScreen from '../screens/CourseDetailScreen';
 import AboutScreen from '../screens/AboutScreen';
 import LoginScreen from '../screens/LoginScreen';
-import CartScreen from '../screens/CartScreen'
+import CartScreen from '../screens/CartScreen';
+import ContactScreen from '../screens/ContactScreen';
 import { Course, CourseType } from '../services/courses';
 
 export type RootStackParamList = {
@@ -16,6 +17,7 @@ export type RootStackParamList = {
     Cart: undefined;
     About: undefined;
     Login: undefined;
+    Contact: undefined;
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -30,6 +32,7 @@ enableScreens(true);
             <Stack.Screen name="Detailed" component={DetailedScreen} options={{ title: 'Course Details' }} />
             <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Your Cart' }} />
             <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About Us' }} />
+            <Stack.Screen name="Contact" component={ContactScreen} options={{title: 'Contact us'}} />
             <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login' }} />
         </Stack.Navigator>
     );

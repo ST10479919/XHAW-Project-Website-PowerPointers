@@ -30,41 +30,37 @@ export default function HomeScreen({ navigation }: Props) {
       </View>
 
       <View style={styles.container}>
-        <Pressable style={styles.button} onPress={() => {
-          navigation.navigate("Login");
-        }}>
+        <Pressable style={styles.button} onPress={() => {navigation.navigate("Login")}}>
           <Text style={{color:"#fff"}}>Login</Text>
         </Pressable>
 
         <View style={styles.groupButtons}>
-          <Pressable style={styles.button} onPress={() => {
-            navigation.navigate("Courses", { courseType: "6-Months" });
-          }}>
+
+          <Pressable style={styles.button} onPress={() => {navigation.navigate("Courses", { courseType: "6-Months" })}}>
             <Text style={{color:"#fff"}}>6-Months</Text>
           </Pressable>
 
-          <Pressable style={styles.button} onPress={() => {
-            navigation.navigate("Courses", { courseType: "6-Weeks" });
-          }}>
+          <Pressable style={styles.button} onPress={() => {navigation.navigate("Courses", { courseType: "6-Weeks" })}}>
             <Text style={{color:"#fff"}}>6-Weeks</Text>
           </Pressable>
         </View>
 
-        <Pressable style={styles.button} onPress={() => {
-          navigation.navigate("Cart");
-        }}>
+        <Pressable style={styles.button} onPress={() => {navigation.navigate("Cart")}}>
           <Text style={{color:"#fff"}}>Cart</Text>
         </Pressable>
-        <Pressable style={styles.button} onPress ={() => {
-          navigation.navigate("About");
-        }}>
+
+        <Pressable style={styles.button} onPress ={() => {navigation.navigate("About")}}>
           <Text style={{color:"#fff"}}>About Us</Text>
         </Pressable>
-        <Pressable style={styles.button} onPress={() => {
-          BackHandler.exitApp();
-        }}>
+
+        <Pressable style={styles.button} onPress={() => {navigation.navigate("Contact")}}>
+          <Text style={{color:"#fff"}}>Contact us</Text>
+        </Pressable>
+        
+        <Pressable style={styles.button} onPress={() => {BackHandler.exitApp()}}>
           <Text style={{color:"#fff"}}>Exit</Text>
         </Pressable>
+
       </View>
     </SafeAreaView>
   );

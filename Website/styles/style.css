@@ -145,6 +145,10 @@ footer{
   transition: 0.2s;
 }
 
+.map {
+  size: 50;
+}
+
 img {
   max-height: 100%;
   max-width: 100%;
