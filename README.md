@@ -32,3 +32,9 @@ Moe-aath Adonis ST10494032
 
 Petrus Venter ST10479919
 
+## References
+
+Anon. 2012. Web Development (Introduction). First Edit ed. The Independent Institute of education (Pty) Ltd 2025.
+Anon. 2025. W3Schools. [online] Available at: <https://www.w3schools.com/ > [Accessed 23 September 2025].
+Hoaphantn7604, 2025. react-native-element-dropdown. [online] Available at: <https://www.npmjs.com/package/react-native-element-dropdown> [Accessed 10 October 2025].
+React Native, 2025. React Native. [online] Available at: <https://reactnative.dev/docs/>.
