@@ -280,3 +280,62 @@ img {
   max-height: 100%;
   max-width: 100%;
 }
+
+/* ---Table section--- */
+
+.course-table {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.course-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #E9F1FF;
+}
+
+.course-table .checkbox-cell {
+  width: 1rem;
+  padding-left: 0.5;
+}
+
+.course-table .course-name {
+  padding: 12px 8px;
+  font-weight: 500;
+}
+
+.course-table .course-price {
+  padding: 12px;
+  text-align: right;
+  font-weight: 600;
+  color: #0B2E4E;
+}
+
+.course-checkbox {
+  width: auto;
+  margin: 0;
+}
+
+.course-checkbox[type="checkbox"] {
+  width: auto;
+}
+
+/* adds a little flair to the table */
+.course-table tr:hover {
+  background-color: var(--brand-soft);
+  border-radius: 6px;
+}
+
+.course-table tr:hover td {
+  background-color: transparent;
+}
+
+/* Responsivness for phones */
+@media (max-width: 640px) {
+  .course-table .course-price {
+    font-size: 0.9rem;
+  }
+  
+  .course-table td {
+    padding: 10px 6px;
+  }
+}
