@@ -28,8 +28,12 @@ npx expo start --tunnel // if on virtualization
 ## Features
 
 - Selection of courses for domestic work 
+- Separation of 6 weeka nd 6 month courses
 - Assistance on selecting courses
 - Calculator for adding the total value
+- VAT Calculated
+- Sending you a quote via E-mail
+- 
 
 ## FAQ
 #### Is the app requred?
