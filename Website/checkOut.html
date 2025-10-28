@@ -20,10 +20,11 @@
   </header>
   <nav aria-label="Primary">
     <a href="index.html">Home</a>
-    <a href="aboutUs.html">About Us</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html" aria-current="page">Checkout</a>
+    <a href="aboutUs.html">About Us</a>
+    <a href="contactUs.html">Contact us</a>
     <a href="quote.html">Quote</a>
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
@@ -31,35 +32,81 @@
 
   <main class="container">
     <section class="card">
-      <h2>Build Your Bundle</h2>
-      <p class="note">Select any mix of courses. VAT (15%) and discounts apply automatically.</p>
+  <h2>Build Your Bundle</h2>
+  <p class="note">Select any mix of courses. VAT (15%) and discounts apply automatically.</p>
 
-      <div class="grid cols-2">
-        <div class="card">
-          <h3>6 Week Short Courses (R750 each)</h3>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Child Minding (6 Week)" value="750"> Child Minding — R750</label>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Cooking (6 Week)" value="750"> Cooking — R750</label>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Garden Maintenance (6 Week)" value="750"> Garden Maintenance — R750</label>
-        </div>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>6 Week Short Courses (R750 each)</h3>
+      <table class="course-table">
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Child Minding (6 Week)" value="750">
+          </td>
+          <td class="course-name">Child Minding</td>
+          <td class="course-price">R750</td>
+        </tr>
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Cooking (6 Week)" value="750">
+          </td>
+          <td class="course-name">Cooking</td>
+          <td class="course-price">R750</td>
+        </tr>
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Garden Maintenance (6 Week)" value="750">
+          </td>
+          <td class="course-name">Garden Maintenance</td>
+          <td class="course-price">R750</td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="card">
-          <h3>6 Month Courses (R1500 each)</h3>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="First Aid (6 Month)" value="1500"> First Aid — R1500</label>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Sewing (6 Month)" value="1500"> Sewing — R1500</label>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Landscaping (6 Month)" value="1500"> Landscaping — R1500</label>
-          <label><input class="course-checkbox" type="checkbox" name="course" data-title="Life Skills (6 Month)" value="1500"> Life Skills — R1500</label>
-        </div>
-      </div>
+    <div class="card">
+      <h3>6 Month Courses (R1500 each)</h3>
+      <table class="course-table">
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="First Aid (6 Month)" value="1500">
+          </td>
+          <td class="course-name">First Aid</td>
+          <td class="course-price">R1500</td>
+        </tr>
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Sewing (6 Month)" value="1500">
+          </td>
+          <td class="course-name">Sewing</td>
+          <td class="course-price">R1500</td>
+        </tr>
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Landscaping (6 Month)" value="1500">
+          </td>
+          <td class="course-name">Landscaping</td>
+          <td class="course-price">R1500</td>
+        </tr>
+        <tr>
+          <td class="checkbox-cell">
+            <input class="course-checkbox" type="checkbox" name="course" data-title="Life Skills (6 Month)" value="1500">
+          </td>
+          <td class="course-name">Life Skills</td>
+          <td class="course-price">R1500</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-      <div class="totals" style="margin-top:16px">
-        <p class="discount-kicker kicker"></p>
-        <ul class="selection-list"></ul>
-        <p>Total before VAT: <strong class="total-before">R0.00</strong></p>
-        <p>VAT (15%): <strong class="vat-line">R0.00</strong></p>
-        <p>Discount: <strong class="discount-line">0% — R0.00</strong></p>
-        <p>Final total: <strong class="final-total">R0.00</strong></p>
-      </div>
-    </section>
+  <div class="totals" style="margin-top:16px">
+    <p class="discount-kicker kicker"></p>
+    <ul class="selection-list"></ul>
+    <p>Total before VAT: <strong class="total-before">R0.00</strong></p>
+    <p>VAT (15%): <strong class="vat-line">R0.00</strong></p>
+    <p>Discount: <strong class="discount-line">0% — R0.00</strong></p>
+    <p>Final total: <strong class="final-total">R0.00</strong></p>
+  </div>
+</section>
 
     <section class="card">
       <h3>Secure Your Spot</h3>
