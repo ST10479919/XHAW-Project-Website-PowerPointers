@@ -1,24 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Defines the document type as HTML5 and sets the language to English -->
   <meta charset="utf-8" />
+  
+  <!-- Page title displayed on the browser tab -->
   <title>Feedback — Empowering the Nation</title>
+  
+  <!-- Ensures proper display and scaling on mobile and desktop devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Links to external CSS stylesheets for layout and button styling -->
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Links to external JavaScript file (loaded after -->
   <script defer src="script.js"></script>
 </head>
+
 <body>
+  <!-- HEADER SECTION -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Company logo -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
+
+      <!-- Page heading and subtitle -->
       <div>
         <h1>We Value Your Feedback</h1>
         <small>Help us improve our training</small>
       </div>
     </div>
   </header>
+
+  <!-- MAIN NAVIGATION BAR -->
   <nav aria-label="Primary">
+    <!-- Each link leads to a main section of the website -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
@@ -26,30 +45,41 @@
     <a href="aboutUs.html">About Us</a>
     <a href="contactUs.html">Contact us</a>
     <a href="quote.html">Quote</a>
+    <!-- The current page is identified for accessibility -->
     <a href="feedback.html" aria-current="page">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
 
+  <!-- MAIN CONTENT SECTION -->
   <main class="container">
     <section class="card">
-      <!-- this is for the user feed back like the UX thingy -->
+      <!-- Section heading -->
       <h2>Tell Us What You Think</h2>
+
+      <!-- Feedback form begins here -->
       <form>
+        <!-- Grid layout with two columns for organized form fields -->
         <div class="grid cols-2">
+          <!-- Name input -->
           <div>
             <label for="f-name">Name</label>
             <input id="f-name" type="text" placeholder="Name" required />
           </div>
+
+          <!-- Surname input -->
           <div>
             <label for="f-surname">Surname</label>
             <input id="f-surname" type="text" placeholder="Surname" required />
           </div>
+
+          <!-- Email input -->
           <div>
             <label for="f-email">Email</label>
             <input id="f-email" type="email" placeholder="you@example.com" required />
           </div>
         </div>
 
+        <!-- Dropdown to select which course the user attended -->
         <label for="f-course">Which course did you attend?</label>
         <select id="f-course">
           <option>First Aid (6 Month)</option>
@@ -61,6 +91,7 @@
           <option>Garden Maintenance (6 Week)</option>
         </select>
 
+        <!-- Dropdown for selecting overall course rating -->
         <label for="f-rating">Overall rating</label>
         <select id="f-rating" required>
           <option value="">Select…</option>
@@ -70,15 +101,24 @@
           <option>Poor</option>
         </select>
 
+        <!-- Textarea for users to write detailed feedback -->
         <label for="feedback-text">Comments</label>
         <textarea id="feedback-text" maxlength="1000" placeholder="Your experience, suggestions, or thanks…"></textarea>
+
+        <!-- Placeholder paragraph for displaying live character count -->
         <p id="char-count" class="note"></p>
 
-        <button class="btn-primary" type="button" onclick="alert('Thank you for your feedback! (demo)')">Submit Feedback (Demo)</button>
+        <!-- Submit button triggers a demo alert instead of sending data -->
+        <button class="btn-primary" type="button" onclick="alert('Thank you for your feedback! (demo)')">
+          Submit Feedback (Demo)
+        </button>
       </form>
     </section>
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  <!-- FOOTER SECTION -->
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
