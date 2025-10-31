@@ -1,27 +1,44 @@
 <!doctype html>
+
 <html lang="en">
 <head>
+  <!-- Document metadata and setup -->
   <meta charset="utf-8" />
   <title>6 Month Courses — Empowering the Nation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Makes layout responsive on all devices -->
+
+  <!-- External CSS files for styling and buttons -->
+
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- External JavaScript for interactivity (if needed) -->
+
   <script defer src="script.js"></script>
+
 </head>
+
 <body>
+  <!--  HEADER SECTION  -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Website logo; aria-hidden since text already provides site name -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
       <div>
         <h1>6 Month Courses</h1>
         <small>Deep, career building programmes</small>
       </div>
     </div>
   </header>
-  <nav aria-label="Primary">
+
+  <!--  NAVIGATION MENU  -->
+
+  <nav aria-label="Primary"> <!-- Main navigation for site -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
-    <a href="longCourses.html" aria-current="page">6 Month Courses</a>
+    <a href="longCourses.html" aria-current="page">6 Month Courses</a> <!-- Highlights current page -->
     <a href="checkout.html">Checkout</a>
     <a href="aboutUs.html">About Us</a>
     <a href="contactUs.html">Contact us</a>
@@ -30,72 +47,85 @@
     <a href="login.html">Login</a>
   </nav>
 
+  <!--  MAIN CONTENT  -->
+
   <main class="container">
+    <!-- Grid layout: two columns to display course cards side by side -->
     <section class="grid cols-2">
 
-      <a href="FirstAidCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">6 Month • R1500</span>
-          <h3>First Aid</h3>
-          <p><strong>Purpose:</strong> First aid awareness and basic life support.</p>
-          <ul class="detail-list">
-            <li>Wounds & bleeding</li>
-            <li>Burns & fractures</li>
-            <li>Emergency scene management</li>
-            <li>CPR</li>
-            <li>Respiratory distress (choking, blocked airways)</li>
-          </ul>
-        </article>
-      </a>
+```
+  <!--  FIRST AID COURSE CARD  -->
+  <a href="FirstAidCourse.html" class="card-link"> <!-- Makes entire card clickable -->
+    <article class="card course">
+      <span class="badge">6 Month • R1500</span> <!-- Course duration and price -->
+      <h3>First Aid</h3>
+      <p><strong>Purpose:</strong> First aid awareness and basic life support.</p>
+      <ul class="detail-list"> <!-- Key learning outcomes -->
+        <li>Wounds & bleeding</li>
+        <li>Burns & fractures</li>
+        <li>Emergency scene management</li>
+        <li>CPR</li>
+        <li>Respiratory distress (choking, blocked airways)</li>
+      </ul>
+    </article>
+  </a>
 
-      <a href="sewingCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">6 Month • R1500</span>
-          <h3>Sewing</h3>
-          <p><strong>Purpose:</strong> Alterations and new garment tailoring services.</p>
-          <ul class="detail-list">
-            <li>Types of stitches</li>
-            <li>Threading a sewing machine</li>
-            <li>Sewing buttons, zips, hems, seams</li>
-            <li>Alterations</li>
-            <li>Designing & sewing new garments</li>
-          </ul>
-        </article>
-      </a>
+  <!--  SEWING COURSE CARD  -->
+  <a href="sewingCourse.html" class="card-link">
+    <article class="card course">
+      <span class="badge">6 Month • R1500</span>
+      <h3>Sewing</h3>
+      <p><strong>Purpose:</strong> Alterations and new garment tailoring services.</p>
+      <ul class="detail-list">
+        <li>Types of stitches</li>
+        <li>Threading a sewing machine</li>
+        <li>Sewing buttons, zips, hems, seams</li>
+        <li>Alterations</li>
+        <li>Designing & sewing new garments</li>
+      </ul>
+    </article>
+  </a>
 
-      <a href="landscapingCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">6 Month • R1500</span>
-          <h3>Landscaping</h3>
-          <p><strong>Purpose:</strong> Landscaping services for new & established gardens.</p>
-          <ul class="detail-list">
-            <li>Indigenous & exotic plants and trees</li>
-            <li>Fixed structures (fountain, statues, benches, built in braai)</li>
-            <li>Balance of plants & trees</li>
-            <li>Aesthetics of plant shapes & colour</li>
-            <li>Garden layout</li>
-          </ul>
-        </article>
-      </a>
+  <!--  LANDSCAPING COURSE CARD  -->
+  <a href="landscapingCourse.html" class="card-link">
+    <article class="card course">
+      <span class="badge">6 Month • R1500</span>
+      <h3>Landscaping</h3>
+      <p><strong>Purpose:</strong> Landscaping services for new & established gardens.</p>
+      <ul class="detail-list">
+        <li>Indigenous & exotic plants and trees</li>
+        <li>Fixed structures (fountain, statues, benches, built-in braai)</li>
+        <li>Balance of plants & trees</li>
+        <li>Aesthetics of plant shapes & colour</li>
+        <li>Garden layout</li>
+      </ul>
+    </article>
+  </a>
 
-      <a href="lifeSkillsCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">6 Month • R1500</span>
-          <h3>Life Skills</h3>
-          <p><strong>Purpose:</strong> Navigate essential life necessities.</p>
-          <ul class="detail-list">
-            <li>Opening a bank account</li>
-            <li>Basic labour law (know your rights)</li>
-            <li>Basic reading & writing literacy</li>
-            <li>Basic numeric literacy</li>
-          </ul>
-        </article>
-      </a>
+  <!--  LIFE SKILLS COURSE CARD  -->
+  <a href="lifeSkillsCourse.html" class="card-link">
+    <article class="card course">
+      <span class="badge">6 Month • R1500</span>
+      <h3>Life Skills</h3>
+      <p><strong>Purpose:</strong> Navigate essential life necessities.</p>
+      <ul class="detail-list">
+        <li>Opening a bank account</li>
+        <li>Basic labour law (know your rights)</li>
+        <li>Basic reading & writing literacy</li>
+        <li>Basic numeric literacy</li>
+      </ul>
+    </article>
+  </a>
 
-    </section>
+</section>
+```
 
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  <!--  FOOTER SECTION  -->
+
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
