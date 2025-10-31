@@ -1,24 +1,42 @@
 <!doctype html>
+
 <html lang="en">
 <head>
+  <!-- Metadata and document setup -->
   <meta charset="utf-8" />
   <title>Login — Empowering the Nation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive design -->
+
+  <!-- External CSS stylesheets for consistent layout and button styling -->
+
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- JavaScript file for potential form validation or interactivity -->
+
   <script defer src="script.js"></script>
+
 </head>
+
 <body>
+  <!--  HEADER SECTION   -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Company logo (hidden from screen readers since the text label already provides context) -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
+      <!-- Branding text -->
       <div>
         <h1>Empowering the Nation</h1>
         <small>Account Access</small>
       </div>
     </div>
   </header>
-  <nav aria-label="Primary">
+
+  <!--  NAVIGATION MENU  -->
+
+  <nav aria-label="Primary"> <!-- Primary site navigation -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
@@ -27,39 +45,58 @@
     <a href="contactUs.html">Contact us</a>
     <a href="quote.html">Quote</a>
     <a href="feedback.html">Feedback</a>
-    <a href="login.html" aria-current="page">Login</a>
+    <a href="login.html" aria-current="page">Login</a> <!-- Highlights current page for accessibility -->
   </nav>
 
+  <!--  MAIN CONTENT  -->
+
   <main class="container">
-    <section class="card">
+    <section class="card"> <!-- Card layout for login form -->
       <h2>Login</h2>
-      <!-- i need feedback from You guys to what else i need to add here so far i only have the number and email and city -->
-      <p class="note">This is a front end demo. Use it to simulate sign in.</p>
-      <form id="login-form">
-        <div>
-            <label for="q-name"> Name</label>
-            <input id="q-name" type="text" required placeholder="Name" />
-          </div>
-          <div>
-            <label for="q-surname"> Surname</label>
-            <input id="q-surname" type="text" required placeholder="Surname" />
-          </div>
-          <div>
-          <div>
-        <div>
-          <label for="login-email">Email</label>
-          <input id="login-email" type="email" placeholder="you@example.com" required />
-        </div>
-        <div>
-          <label for="login-pass">Password</label>
-          <input id="login-pass" type="password" placeholder="••••••••" required />
-        </div>
-        <button class="btn-primary" type="submit">Sign In</button>
-        <p id="login-msg" class="note" role="status" aria-live="polite"></p>
-      </form>
-    </section>
+      <!-- Note to users: currently only a front-end simulation -->
+      <p class="note">This is a front-end demo. Use it to simulate sign-in.</p>
+
+```
+  <!--  LOGIN FORM  -->
+  <form id="login-form">
+    <!-- Full name input fields -->
+    <div>
+      <label for="q-name">Name</label>
+      <input id="q-name" type="text" required placeholder="Name" />
+    </div>
+
+    <div>
+      <label for="q-surname">Surname</label>
+      <input id="q-surname" type="text" required placeholder="Surname" />
+    </div>
+
+    <!-- Email field for account identification -->
+    <div>
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" placeholder="you@example.com" required />
+    </div>
+
+    <!-- Password field (hidden input type for privacy) -->
+    <div>
+      <label for="login-pass">Password</label>
+      <input id="login-pass" type="password" placeholder="••••••••" required />
+    </div>
+
+    <!-- Submit button for login action -->
+    <button class="btn-primary" type="submit">Sign In</button>
+
+    <!-- Placeholder for dynamic feedback (e.g., "Login successful" message) -->
+    <p id="login-msg" class="note" role="status" aria-live="polite"></p>
+  </form>
+</section>
+```
+
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  <!--  FOOTER SECTION  -->
+
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
