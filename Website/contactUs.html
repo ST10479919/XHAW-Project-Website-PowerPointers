@@ -1,74 +1,134 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Defines the document type and language -->
   <meta charset="utf-8" />
   <title>Contact Us — Empowering the Nation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Link to external CSS files for layout and button styling -->
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Link to JavaScript file -->
   <script defer src="script.js"></script>
 </head>
+
 <body>
+  <!-- HEADER SECTION -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Website logo -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
+
+      <!-- Page title and subtitle -->
       <div>
         <h1>Contact us</h1>
         <small>Get in touch with us</small>
       </div>
     </div>
   </header>
+
+  <!-- NAVIGATION BAR -->
   <nav aria-label="Primary">
+    <!-- Each link directs to a key section of the site -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html">Checkout</a>
     <a href="aboutUs.html">About Us</a>
+    <!-- aria-current marks the current active page -->
     <a href="contactUs.html" aria-current="page">Contact us</a>
     <a href="quote.html">Quote</a>
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
     
-<main class="container">
+  <!-- MAIN CONTENT AREA -->
+  <main class="container">
+
+    <!-- General contact information -->
     <section class="card">
-        <h2>General Inquiries</h2>
-        <p>For general questions about our courses, partnerships, or anything else, please reach out to our main office.</p>
-        <ul class="detail-list">
-            <li><strong>Phone:</strong> <a href="tel:+27123456789">+27 12 345 6789</a></li>
-            <li><strong>Email:</strong> <a href="mailto:info@empoweringthenation.co.za">info@empoweringthenation.co.za</a></li>
-        </ul>
+      <h2>General Inquiries</h2>
+      <p>
+        For general questions about our courses, partnerships, or anything else,
+        please reach out to our main office.
+      </p>
+
+      <!-- Contact details list with clickable phone and email links -->
+      <ul class="detail-list">
+        <li><strong>Phone:</strong> <a href="tel:+27123456789">+27 12 345 6789</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@empoweringthenation.co.za">info@empoweringthenation.co.za</a></li>
+      </ul>
     </section>
 
+    <!-- Training center locations with Google Maps embeds -->
     <section class="card">
-        <h2>Our Training Locations</h2>
-        <div class="grid cols-3">
-            <article class="card">
-                <h3>Rosebank</h3>
-                <address>
-                    3 keyes Ave, Rosebank,<br>
-                    Johannesburg, 2196<br>
-                    </address>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5366.152759617888!2d28.03575952271877!3d-26.148579579970257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d08897f1071%3A0x7bad8ab0976fcb2a!2sIIE%20School%20of%20Hospitality%20%26%20Service%20Management%20Rosebank!5e0!3m2!1sen!2sza!4v1760397220890!5m2!1sen!2sza" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></article>
-            <article class="card">
-                <h3>Roodepoort</h3>
-                <address>
-                    144 Peter Rd,<br>
-                    Ruimsig, Roodepoort, 1724<br>
-                    </address>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.4770464857484!2d27.876455!3d-26.083342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959ef5277b96a7%3A0xc4aa15508f8e5e8c!2sIIE%20MSA!5e0!3m2!1sen!2sza!4v1760398323723!5m2!1sen!2sza" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </article>
-            <article class="card">
-                <h3>Randburg</h3>
-                <address>
-                    444 Jan Smuts Ave,<br>
-                    Bordeaux, Randburg, 2194<br>
-                    </address>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.6940778676326!2d28.0175122!3d-26.1089032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574a83086dd07%3A0x1bdd953f1f027332!2sVega%20School%20Jo%E2%80%8Bhannesburg!5e0!3m2!1sen!2sza!4v1760398411486!5m2!1sen!2sza" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </article>
-        </div>
+      <h2>Our Training Locations</h2>
+
+      <!-- Grid layout with three columns for location cards -->
+      <div class="grid cols-3">
+
+        <!-- LOCATION 1: Rosebank -->
+        <article class="card">
+          <h3>Rosebank</h3>
+          <!-- Physical address displayed semantically -->
+          <address>
+            3 Keyes Ave, Rosebank,<br>
+            Johannesburg, 2196<br>
+          </address>
+
+          <!-- Google Maps embed for Rosebank campus -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5366.152759617888!2d28.03575952271877!3d-26.148579579970257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d08897f1071%3A0x7bad8ab0976fcb2a!2sIIE%20School%20of%20Hospitality%20%26%20Service%20Management%20Rosebank!5e0!3m2!1sen!2sza!4v1760397220890!5m2!1sen!2sza"
+            width="100%" height="250" style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </article>
+
+        <!-- LOCATION 2: Roodepoort -->
+        <article class="card">
+          <h3>Roodepoort</h3>
+          <address>
+            144 Peter Rd,<br>
+            Ruimsig, Roodepoort, 1724<br>
+          </address>
+
+          <!-- Google Maps embed for Roodepoort campus -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.4770464857484!2d27.876455!3d-26.083342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959ef5277b96a7%3A0xc4aa15508f8e5e8c!2sIIE%20MSA!5e0!3m2!1sen!2sza!4v1760398323723!5m2!1sen!2sza"
+            width="100%" height="250" style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </article>
+
+        <!-- LOCATION 3: Randburg -->
+        <article class="card">
+          <h3>Randburg</h3>
+          <address>
+            444 Jan Smuts Ave,<br>
+            Bordeaux, Randburg, 2194<br>
+          </address>
+
+          <!-- Google Maps embed for Randburg campus -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.6940778676326!2d28.0175122!3d-26.1089032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574a83086dd07%3A0x1bdd953f1f027332!2sVega%20School%20Jo%E2%80%8Bhannesburg!5e0!3m2!1sen!2sza!4v1760398411486!5m2!1sen!2sza"
+            width="100%" height="250" style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </article>
+      </div>
     </section>
-</main>
-<footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
