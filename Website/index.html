@@ -1,85 +1,123 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
+  <!-- Metadata and general page setup -->
   <meta charset="utf-8" />
   <title>Empowering the Nation — Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="Upskilling domestic workers and gardeners through short courses and six-month training in Johannesburg." />
+
+  <!-- Link to external CSS stylesheet -->
+
   <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- JavaScript file loaded after the page for better performance -->
+
   <script defer src="script.js"></script>
+
 </head>
 
 <body>
 
+  <!-- HEADER SECTION -->
+
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="assets/img/WebsiteLogoTrans.png"></div>
-      <div>
-        <h1>Empowering the Nation</h1>
-        <small>Professional Skills Training in Johannesburg • Est. 2022</small>
+      <!-- Website logo image  -->
+      <div class="logo" aria-hidden="true">
+        <img src="assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation Logo">
       </div>
-    </div>
+
+```
+  <!-- Site name and tagline -->
+  <div>
+    <h1>Empowering the Nation</h1>
+    <small>Professional Skills Training in Johannesburg • Est. 2022</small>
+  </div>
+</div>
+```
+
   </header>
-  <!-- Navigation to other pages -->
+
+  <!-- NAVIGATION BAR -->
+
+  <!-- Main navigation menu linking to other site pages -->
+
   <nav aria-label="Primary">
     <a href="index.html" aria-current="page">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html">Checkout</a>
     <a href="aboutUs.html">About Us</a>
-    <a href="contactUs.html">Contact us</a>
+    <a href="contactUs.html">Contact Us</a>
     <a href="quote.html">Quote</a>
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
 
+  <!-- = MAIN CONTENT AREA -->
+
   <main class="container">
-    <section class="card">
-      <h2>Upskill. Empower. Thrive.</h2>
-      <p>
-        Founded by <strong>Precious Radebe</strong>, Empowering the Nation provides practical, market ready training
-        for domestic workers and gardeners. Our programmes help learners earn higher wages, gain confidence,
-        and even start their own small businesses.
-      </p>
-      <p class="note">Many employers also enroll their household staff to expand the services they can offer with confidence and professionalism.</p>
-    </section>
 
-    <!-- Social media links| TODO: make sure the links don't look blue like hyperlinks -->
-    <section class="grid cols-3">
-      <article class="card course">
-        <span class="badge">6 Month Tracks</span>
-        <h3>Build Deep Expertise</h3>
-        <p>First Aid • Sewing • Landscaping • Life Skills.</p> 
-        <p class="price">From R1,500 per course</p>
-        <a class="explr-btn" href="longCourses.html">Explore 6 Month Courses</a>
-      </article>
+```
+<!-- Introductory Section-->
+<section class="card">
+  <h2>Upskill. Empower. Thrive.</h2>
+  <p>
+    Founded by <strong>Precious Radebe</strong>, Empowering the Nation provides practical, market-ready training
+    for domestic workers and gardeners. Our programmes help learners earn higher wages, gain confidence,
+    and even start their own small businesses.
+  </p>
+  <p class="note">
+    Many employers also enroll their household staff to expand the services they can offer with confidence and professionalism.
+  </p>
+</section>
 
-      <article class="card course">
-        <span class="badge">6 Week Short Courses</span>
-        <h3>Quick, Powerful Upskilling</h3>
-        <p>Child Minding • Cooking • Garden Maintenance.</p>
-        <p class="price">From R750 per course</p>
-        <a class="explr-btn" href="shortCourses.html">Explore 6 Week Courses</a>
-      </article>
+<!-- Course Offerings Section -->
+<!-- Each article below highlights a training category -->
+<section class="grid cols-3">
 
-      <article class="card course">
-        <span class="badge">Bundle & Save</span>
-        <h3>Discounts for Multiple Courses</h3>
-        <ul class="detail-list">
-          <li>1 course: <strong>No discount</strong></li>
-          <li>2 courses: <strong>5% off</strong></li>
-          <li>3 courses: <strong>10% off</strong></li>
-          <li>4+ courses: <strong>15% off</strong></li>
-        </ul>
-        <a class="explr-btn" href="checkout.html">Calculate My Total</a>
-      </article>
-    </section>
+  <!-- Long Courses Card -->
+  <article class="card course">
+    <span class="badge">6 Month Tracks</span>
+    <h3>Build Deep Expertise</h3>
+    <p>First Aid • Sewing • Landscaping • Life Skills.</p>
+    <p class="price">From R1,500 per course</p>
+    <a class="explr-btn" href="longCourses.html">Explore 6 Month Courses</a>
+  </article>
+
+  <!-- Short Courses Card -->
+  <article class="card course">
+    <span class="badge">6 Week Short Courses</span>
+    <h3>Quick, Powerful Upskilling</h3>
+    <p>Child Minding • Cooking • Garden Maintenance.</p>
+    <p class="price">From R750 per course</p>
+    <a class="explr-btn" href="shortCourses.html">Explore 6 Week Courses</a>
+  </article>
+
+  <!-- Discounts and Bundles Card -->
+  <article class="card course">
+    <span class="badge">Bundle & Save</span>
+    <h3>Discounts for Multiple Courses</h3>
+    <ul class="detail-list">
+      <li>1 course: <strong>No discount</strong></li>
+      <li>2 courses: <strong>5% off</strong></li>
+      <li>3 courses: <strong>10% off</strong></li>
+      <li>4+ courses: <strong>15% off</strong></li>
+    </ul>
+    <a class="explr-btn" href="checkout.html">Calculate My Total</a>
+  </article>
+</section>
+```
+
   </main>
-
+  <!-- FOOTER -->
   <footer>
     © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
   </footer>
+
 </body>
 </html>
