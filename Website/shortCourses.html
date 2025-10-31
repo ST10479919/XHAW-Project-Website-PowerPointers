@@ -1,24 +1,43 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>6 Week Short Courses — Empowering the Nation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Define document type and language -->
+  <meta charset="utf-8" /> <!-- Character encoding for proper display -->
+  <title>6 Week Short Courses — Empowering the Nation</title> <!-- Page title displayed in browser tab -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive design -->
+
+  <!-- Link external CSS for layout and button styling -->
+
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Link to JavaScript file for interactive functionality -->
+
   <script defer src="script.js"></script>
+
 </head>
+
 <body>
+  <!--  HEADER SECTION  -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Logo section -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
+      <!-- Title and subtitle -->
       <div>
         <h1>6 Week Short Courses</h1>
         <small>Fast, focused upskilling</small>
       </div>
     </div>
   </header>
+
+  <!--  NAVIGATION BAR  -->
+
   <nav aria-label="Primary">
+    <!-- Navigation links to different pages -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html" aria-current="page">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
@@ -30,53 +49,65 @@
     <a href="login.html">Login</a>
   </nav>
 
+  <!--  MAIN CONTENT  -->
+
   <main class="container">
-    <section class="grid cols-3">
+    <section class="grid cols-3"> <!-- Grid layout for three course cards -->
 
-      <a href="childMindingCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">Short Course • R750</span>
-          <h3>Child Minding</h3>
-          <p><strong>Purpose:</strong> Basic child and baby care.</p>
-          <ul class="detail-list">
-            <li>Birth to 6 month needs</li>
-            <li>7 month to 1 year needs</li>
-            <li>Toddler needs</li>
-            <li>Educational toys</li>
-          </ul>
-        </article>
-      </a>
+```
+  <!--  CHILD MINDING COURSE  -->
+  <a href="childMindingCourse.html" class="card-link">
+    <article class="card course"> <!-- Each course is displayed in a card -->
+      <span class="badge">Short Course • R750</span> <!-- Course type and cost -->
+      <h3>Child Minding</h3>
+      <p><strong>Purpose:</strong> Basic child and baby care.</p>
+      <ul class="detail-list">
+        <li>Birth to 6 month needs</li>
+        <li>7 month to 1 year needs</li>
+        <li>Toddler needs</li>
+        <li>Educational toys</li>
+      </ul>
+    </article>
+  </a>
 
-      <a href="cookingCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">Short Course • R750</span>
-          <h3>Cooking</h3>
-          <p><strong>Purpose:</strong> Prepare and cook nutritious family meals.</p>
-          <ul class="detail-list">
-            <li>Nutritional requirements</li>
-            <li>Proteins, carbohydrates, vegetables</li>
-            <li>Meal planning</li>
-            <li>Recipes; preparation and cooking</li>
-          </ul>
-        </article>
-      </a>
+  <!--  COOKING COURSE  -->
+  <a href="cookingCourse.html" class="card-link">
+    <article class="card course">
+      <span class="badge">Short Course • R750</span>
+      <h3>Cooking</h3>
+      <p><strong>Purpose:</strong> Prepare and cook nutritious family meals.</p>
+      <ul class="detail-list">
+        <li>Nutritional requirements</li>
+        <li>Proteins, carbohydrates, vegetables</li>
+        <li>Meal planning</li>
+        <li>Recipes; preparation and cooking</li>
+      </ul>
+    </article>
+  </a>
 
-      <a href="gardenCourse.html" class="card-link">
-        <article class="card course">
-          <span class="badge">Short Course • R750</span>
-          <h3>Garden Maintenance</h3>
-          <p><strong>Purpose:</strong> Watering, pruning, planting in a domestic garden.</p>
-          <ul class="detail-list">
-            <li>Water restrictions & plant needs</li>
-            <li>Pruning & propagation</li>
-            <li>Planting techniques by type</li>
-          </ul>
-        </article>
-      </a>
+  <!--  GARDEN MAINTENANCE COURSE  -->
+  <a href="gardenCourse.html" class="card-link">
+    <article class="card course">
+      <span class="badge">Short Course • R750</span>
+      <h3>Garden Maintenance</h3>
+      <p><strong>Purpose:</strong> Watering, pruning, planting in a domestic garden.</p>
+      <ul class="detail-list">
+        <li>Water restrictions & plant needs</li>
+        <li>Pruning & propagation</li>
+        <li>Planting techniques by type</li>
+      </ul>
+    </article>
+  </a>
 
-    </section>
+</section>
+```
+
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  <!--  FOOTER SECTION  -->
+
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
