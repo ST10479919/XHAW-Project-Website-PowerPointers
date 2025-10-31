@@ -1,11 +1,11 @@
-/* ========== Empowering the Nation — Simple Site Interactivity ========== */
+/*  Empowering the Nation — Simple Site Interactivity  */
 
-// Helper: query
+// Helper query
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
-/* ----- Discount Calculator (Checkout & Quote) ----- 
- Rules:
+/* Discount Calculator (Checkout & Quote) 
+ Rules
  1 course: 0%
  2 courses: 5%
  3 courses: 10%
@@ -19,7 +19,7 @@ function computeDiscount(courseCount){
   return 0.15; // 4 or more
 }
 
-function formatRand(n){ // Format number as ZAR currency
+function formatRand(n){ // Format number as ZAR (Rand) currency
   return "R" + Number(n).toLocaleString("en-ZA", {maximumFractionDigits:2, minimumFractionDigits:2});
 }
 

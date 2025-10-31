@@ -1,75 +1,115 @@
 <!doctype html>
+
 <html lang="en">
 <head>
+  <!-- Metadata and page setup -->
   <meta charset="utf-8" />
   <title>Request a Quote — Empowering the Nation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Ensures proper scaling on all devices -->
+
+  <!-- External CSS for layout and button styling -->
+
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- External JavaScript file for form handling -->
+
   <script defer src="script.js"></script>
+
 </head>
+
 <body>
+  <!--  HEADER SECTION  -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
-      <div>
-        <h1>Request a Quote</h1>
-        <!-- i Worked on a Calculator/Quote Page on Monday and this is what i came up with
-         i had to implement a bit of JS to get  in functioning but it works well and is pretty smooth -->
-        <small>Employers & individuals welcome</small>
+      <!-- Logo with descriptive alt text for accessibility -->
+      <div class="logo" aria-hidden="true">
+        <img src="/Website/assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
       </div>
-    </div>
+
+```
+  <!-- Header title and short description -->
+  <div>
+    <h1>Request a Quote</h1>
+    <!-- Developer’s note explaining their implementation -->
+    <!-- Worked on this quote calculator page with basic JS functionality to make it interactive -->
+    <small>Employers & individuals welcome</small>
+  </div>
+</div>
+```
+
   </header>
-  <nav aria-label="Primary">
+
+  <!--  NAVIGATION BAR  -->
+
+  <nav aria-label="Primary"> <!-- Helps screen readers identify this as the main navigation -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html">Checkout</a>
     <a href="aboutUs.html">About Us</a>
-    <a href="contactUs.html">Contact us</a>
-    <a href="quote.html" aria-current="page">Quote</a>
+    <a href="contactUs.html">Contact Us</a>
+    <a href="quote.html" aria-current="page">Quote</a> <!-- Indicates current page -->
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
 
+  <!--  MAIN CONTENT SECTION  -->
+
   <main class="container">
     <section class="card">
+      <!-- Page heading -->
       <h2>Tell Us What You Need</h2>
-      <form id="quote-form">
-        <div class="grid cols-2">
-          <div>
-            <label for="q-name"> Name</label>
-            <input id="q-name" type="text" placeholder="Name" />
-          </div>
-          <div>
-            <label for="q-surname"> Surname</label>
-            <input id="q-surname" type="text" required placeholder="Surname" />
-          </div>
-          <div>
-            <label for="q-email">Email</label>
-            <input id="q-email" type="email" required placeholder="you@example.com" />
-          </div>
-          <div>
-            <label for="q-gender">Gender</label>
-            <select id="q-gender">
-              <option> Male </option>
-              <option> Female </option>
-              <option> Other </option>
-            </select>
-          </div>
-        </div>
 
+  <!--  QUOTE REQUEST FORM  -->
+  <form id="quote-form">
+    <!-- Grid layout for organized field alignment -->
+    <div class="grid cols-2">
+      <!-- Name field -->
+      <div>
+        <label for="q-name">Name</label>
+        <input id="q-name" type="text" placeholder="Name" />
+      </div>
 
+      <!-- Surname field (required) -->
+      <div>
+        <label for="q-surname">Surname</label>
+        <input id="q-surname" type="text" required placeholder="Surname" />
+      </div>
 
+      <!-- Email input for communication -->
+      <div>
+        <label for="q-email">Email</label>
+        <input id="q-email" type="email" required placeholder="you@example.com" />
+      </div>
 
-        <label for="q-notes">Additional Notes</label>
-        <textarea id="q-notes" placeholder="Schedule preferences, special requirements, etc."></textarea>
+      <!-- Gender selection dropdown -->
+      <div>
+        <label for="q-gender">Gender</label>
+        <select id="q-gender">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
 
-        <button class="btn-primary" type="button" onclick="alert('Quote submitted (demo). We will contact you shortly.')">Request Quote (Demo)</button>
-      </form>
-    </section>
+    <!-- Textarea for users to describe any special requirements or scheduling details -->
+    <label for="q-notes">Additional Notes</label>
+    <textarea id="q-notes" placeholder="Schedule preferences, special requirements, etc."></textarea>
+
+    <!-- Button triggers a demo alert instead of submitting actual data -->
+    <button class="btn-primary" type="button" onclick="alert('Quote submitted (demo). We will contact you shortly.')">
+      Request Quote (Demo)
+    </button>
+  </form>
+</section>
+
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
