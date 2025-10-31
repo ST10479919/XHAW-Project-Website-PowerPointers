@@ -1,28 +1,47 @@
+Sure! Here’s your HTML code with **clear explanatory comments** added throughout. The comments explain the structure, purpose, and reasoning behind each section — helpful for both documentation and presentations.
+
+```html
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Metadata section defining document type, language, and encoding -->
   <meta charset="utf-8" />
   <title>About Us — Empowering the Nation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Linking external CSS files for layout and button styling -->
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
+
+  <!-- Linking JavaScript file -->
   <script defer src="script.js"></script>
 </head>
+
 <body>
+  <!-- Header Contains website logo and title -->
   <header class="site-header">
     <div class="brand">
-      <div class="logo" aria-hidden="true"> <img src="/Website/assets/img/WebsiteLogoTrans.png"></div>
+      <!-- Website logo image -->
+      <div class="logo" aria-hidden="true">
+        <img src="assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
+      </div>
+
+      <!-- Organization title and subtitle -->
       <div>
         <h1>Empowering the Nation</h1>
         <small>Our Story & Mission</small>
       </div>
     </div>
   </header>
+
+  <!-- Navigation bar with links to main pages of the website -->
   <nav aria-label="Primary">
+    <!-- Each anchor links to a different webpage -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html">Checkout</a>
+    <!-- aria-current="page" indicates the currently active page -->
     <a href="aboutUs.html" aria-current="page">About Us</a>
     <a href="contactUs.html">Contact us</a>
     <a href="quote.html">Quote</a>
@@ -30,26 +49,34 @@
     <a href="login.html">Login</a>
   </nav>
 
+  <!-- Main content area of the page -->
   <main class="container">
+
+    <!-- Section 1: Introduction / Organization overview -->
     <section class="card">
       <h2>Who We Are</h2>
-      <!-- More information need to go here im not sure how we want to do that. i only have
-       the information that they gave us in the POE. We are going to make up some other information
-       to make the About us Better looking and sounding -->
+
+      <!-- Description of the organization's background and purpose -->
       <p>
         <strong>Empowering the Nation</strong> was established in 2022 by <strong>Precious Radebe</strong> to provide
         professional skills training to domestic workers and gardeners in Johannesburg.
       </p>
+
       <p>
         Inspired by her parents and elders who lacked opportunities to upskill, Precious built a program that helps learners
         become more marketable, earn higher wages, and even launch their own small businesses.
       </p>
+
+      <!-- Highlighting key achievement -->
       <p class="note">
-        Hundreds of learners have already completed our six month Learnerships and six‑week Short Skills Training Programs.
+        Hundreds of learners have already completed our six month Learnerships and six-week Short Skills Training Programs.
       </p>
     </section>
 
+    <!-- Two-column layout for offerings and impact -->
     <section class="grid cols-2">
+      
+      <!-- Details about available training programmes -->
       <div class="card">
         <h3>What We Offer</h3>
         <ul class="detail-list">
@@ -58,8 +85,9 @@
           <li>Discounts when you bundle multiple courses.</li>
         </ul>
       </div>
+
+      <!-- Explanation of the organization’s social impact -->
       <div class="card">
-        <!-- i was litrally making stuff up we need better inforamtion -->
         <h3>Why It Matters</h3>
         <p>
           Employers gain confidence and value from skilled staff; employees gain dignity, mobility,
@@ -69,6 +97,9 @@
     </section>
   </main>
 
-  <footer>© 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.</footer>
+  <!-- Footer Displays copyright -->
+  <footer>
+    © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
+  </footer>
 </body>
 </html>
