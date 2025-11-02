@@ -1,111 +1,87 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <!-- Metadata and page setup -->
   <meta charset="utf-8" />
   <title>Request a Quote — Empowering the Nation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Ensures proper scaling on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- External CSS for layout and button styling -->
-
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
 
   <!-- External JavaScript file for form handling -->
-
   <script defer src="script.js"></script>
-
 </head>
 
 <body>
-  <!--  HEADER SECTION  -->
+  <!-- HEADER SECTION -->
   <header class="site-header">
     <div class="brand">
-      <!-- Logo with descriptive alt text for accessibility -->
       <div class="logo" aria-hidden="true">
         <img src="assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
       </div>
-
-  <!-- Header title and short description -->
-  <div>
-    <h1>Request a Quote</h1>
-    <!-- Developer’s note explaining their implementation -->
-    <!-- Worked on this quote calculator page with basic JS functionality to make it interactive -->
-    <small>Employers & individuals welcome</small>
-  </div>
-</div>
-
-
+      <div>
+        <h1>Request a Quote</h1>
+        <small>Employers & individuals welcome</small>
+      </div>
+    </div>
   </header>
 
-  <!--  NAVIGATION BAR  -->
-
-  <nav aria-label="Primary"> <!-- Helps screen readers identify this as the main navigation -->
+  <!-- NAVIGATION BAR -->
+  <nav aria-label="Primary">
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
     <a href="checkout.html">Checkout</a>
     <a href="aboutUs.html">About Us</a>
     <a href="contactUs.html">Contact Us</a>
-    <a href="quote.html" aria-current="page">Quote</a> <!-- Indicates current page -->
+    <a href="quote.html" aria-current="page">Quote</a>
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
 
-  <!--  MAIN CONTENT SECTION  -->
-
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="card">
-      <!-- Page heading -->
       <h2>Tell Us What You Need</h2>
 
-  <!--  QUOTE REQUEST FORM  -->
-  <form id="quote-form">
-    <!-- Grid layout for organized field alignment -->
-    <div class="grid cols-2">
-      <!-- Name field -->
-      <div>
-        <label for="q-name">Name</label>
-        <input id="q-name" type="text" placeholder="Name" />
-      </div>
+      <!-- QUOTE REQUEST FORM -->
+      <form id="quote-form" novalidate>
+        <div class="grid cols-2">
+          <div>
+            <label for="q-name">Name</label>
+            <input id="q-name" type="text" placeholder="Name" required />
+          </div>
 
-      <!-- Surname field (required) -->
-      <div>
-        <label for="q-surname">Surname</label>
-        <input id="q-surname" type="text" required placeholder="Surname" />
-      </div>
+          <div>
+            <label for="q-surname">Surname</label>
+            <input id="q-surname" type="text" required placeholder="Surname" />
+          </div>
 
-      <!-- Email input for communication -->
-      <div>
-        <label for="q-email">Email</label>
-        <input id="q-email" type="email" required placeholder="you@example.com" />
-      </div>
+          <div>
+            <label for="q-email">Email</label>
+            <input id="q-email" type="email" required placeholder="you@example.com" />
+          </div>
 
-      <!-- Gender selection dropdown -->
-      <div>
-        <label for="q-gender">Gender</label>
-        <select id="q-gender">
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
-      </div>
-    </div>
+          <div>
+            <label for="q-gender">Gender</label>
+            <select id="q-gender" required>
+              <option value="">Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
 
-    <!-- Textarea for users to describe any special requirements or scheduling details -->
-    <label for="q-notes">Additional Notes</label>
-    <textarea id="q-notes" placeholder="Schedule preferences, special requirements, etc."></textarea>
+        <label for="q-notes">Additional Notes</label>
+        <textarea id="q-notes" placeholder="Schedule preferences, special requirements, etc."></textarea>
 
-    <!-- Button triggers a demo alert instead of submitting actual data -->
-    <button class="btn-primary" type="button" onclick="alert('Quote submitted (demo). We will contact you shortly.')">
-      Request Quote (Demo)
-    </button>
-  </form>
-</section>
-
+        <button class="btn-primary" type="submit">Request Quote</button>
+      </form>
+    </section>
   </main>
-
 
   <footer>
     © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.

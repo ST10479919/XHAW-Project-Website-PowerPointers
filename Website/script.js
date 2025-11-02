@@ -247,3 +247,63 @@ document.addEventListener('DOMContentLoaded', () => {
     phoneInput.value = phoneInput.value.replace(/[^0-9+]/g, '');
   });
 });
+
+// script.js — Validation for Request a Quote form
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("quote-form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // prevent page refresh
+
+    // Retrieve input values
+    const name = document.getElementById("q-name").value.trim();
+    const surname = document.getElementById("q-surname").value.trim();
+    const email = document.getElementById("q-email").value.trim();
+    const gender = document.getElementById("q-gender").value;
+    const notes = document.getElementById("q-notes").value.trim();
+
+    // Validation flags
+    let isValid = true;
+    let errorMessage = "";
+
+    // Name validation
+    if (name === "" || name.length < 2) {
+      isValid = false;
+      errorMessage += "• Please enter a valid name (at least 2 characters).\n";
+    }
+
+    // Surname validation
+    if (surname === "" || surname.length < 2) {
+      isValid = false;
+      errorMessage += "• Please enter a valid surname (at least 2 characters).\n";
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      isValid = false;
+      errorMessage += "• Please enter a valid email address.\n";
+    }
+
+    // Gender validation
+    if (gender === "") {
+      isValid = false;
+      errorMessage += "• Please select your gender.\n";
+    }
+
+    // If not valid, show error alert
+    if (!isValid) {
+      alert("Please fix the following errors:\n\n" + errorMessage);
+      return;
+    }
+
+    // If valid, show success message
+    alert(
+      `Quote request submitted successfully!\n\nThank you, ${name} ${surname}.\nWe will contact you at ${email} shortly.`
+    );
+
+    // Optionally clear form after submission
+    form.reset();
+  });
+});
