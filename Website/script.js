@@ -307,3 +307,67 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 });
+// feedback.js — Validation for Feedback Form
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#feedback-form');
+  const name = document.querySelector('#f-name');
+  const surname = document.querySelector('#f-surname');
+  const email = document.querySelector('#f-email');
+  const course = document.querySelector('#f-course');
+  const rating = document.querySelector('#f-rating');
+  const feedback = document.querySelector('#feedback-text');
+  const charCount = document.querySelector('#char-count');
+
+  // Live character count for feedback textarea
+  feedback.addEventListener('input', () => {
+    const remaining = 1000 - feedback.value.length;
+    charCount.textContent = `${remaining} characters remaining`;
+  });
+
+  // Form validation on submit
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Trim inputs
+    const nameVal = name.value.trim();
+    const surnameVal = surname.value.trim();
+    const emailVal = email.value.trim();
+    const feedbackVal = feedback.value.trim();
+
+    // Basic validation
+    if (!nameVal || !surnameVal || !emailVal) {
+      alert('Please fill in all required fields (Name, Surname, Email).');
+      return;
+    }
+
+    // Email format validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailVal)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Course and rating selection check
+    if (!course.value) {
+      alert('Please select the course you attended.');
+      return;
+    }
+
+    if (!rating.value) {
+      alert('Please select an overall rating.');
+      return;
+    }
+
+    // Optional: Minimum feedback length
+    if (feedbackVal.length > 0 && feedbackVal.length < 10) {
+      alert('Please provide more detailed comments (at least 10 characters).');
+      return;
+    }
+
+    // If everything is valid
+    alert('✅ Thank you for your feedback!');
+    form.reset();
+    charCount.textContent = ''; // Reset character counter
+  });
+});
