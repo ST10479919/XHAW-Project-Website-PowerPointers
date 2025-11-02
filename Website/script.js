@@ -165,3 +165,85 @@ document.addEventListener("DOMContentLoaded", () => {
     kickerEl.textContent = count > 0 ? `You selected ${count} course(s).` : "";
   }
 });
+
+// checkoutValidation.js
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+  const checkboxes = document.querySelectorAll('.course-checkbox');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent normal submit
+
+    // ✅ 1. Check at least one course selected
+    const selected = Array.from(checkboxes).some(cb => cb.checked);
+    if (!selected) {
+      alert('⚠️ Please select at least one course before submitting.');
+      return;
+    }
+
+    // ✅ 2. Grab form inputs
+    const fullname = document.getElementById('fullname');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const city = document.getElementById('city');
+    let valid = true;
+
+    // Helper functions for showing / clearing errors
+    const showError = (input, message) => {
+      let msg = input.parentElement.querySelector('.error-msg');
+      if (!msg) {
+        msg = document.createElement('small');
+        msg.className = 'error-msg';
+        msg.style.color = 'red';
+        input.parentElement.appendChild(msg);
+      }
+      msg.textContent = message;
+      input.style.borderColor = 'red';
+    };
+
+    const clearError = (input) => {
+      const msg = input.parentElement.querySelector('.error-msg');
+      if (msg) msg.remove();
+      input.style.borderColor = '';
+    };
+
+    // ✅ Full Name validation
+    if (fullname.value.trim().length < 3) {
+      showError(fullname, 'Full name must be at least 3 characters.');
+      valid = false;
+    } else clearError(fullname);
+
+    // ✅ Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      showError(email, 'Enter a valid email address.');
+      valid = false;
+    } else clearError(email);
+
+    // ✅ Phone validation (+27 or 0 start, 9–11 digits)
+    const phonePattern = /^(\+27|0)\d{9,11}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+      showError(phone, 'Enter a valid South African phone number.');
+      valid = false;
+    } else clearError(phone);
+
+    // ✅ City validation
+    if (city.value.trim().length < 2) {
+      showError(city, 'City name must be at least 2 characters.');
+      valid = false;
+    } else clearError(city);
+
+    // ✅ If all checks passed
+    if (valid) {
+      alert('✅ Thank you! This is a demo — your information has been validated.');
+      form.reset();
+      checkboxes.forEach(cb => cb.checked = false);
+    }
+  });
+
+  // ✅ Allow only digits and "+" in phone number
+  const phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/[^0-9+]/g, '');
+  });
+});

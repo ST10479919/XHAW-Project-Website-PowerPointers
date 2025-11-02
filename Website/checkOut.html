@@ -1,29 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Defines document type and basic metadata -->
   <meta charset="utf-8" />
   <title>Checkout — Empowering the Nation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Link external CSS stylesheets for layout and button design -->
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/buttons.css" />
 
-  <!-- Link external JavaScript file -->
+  <!-- JavaScript Files -->
   <script defer src="script.js"></script>
+  <script defer src="checkoutValidation.js"></script>
 </head>
 
 <body>
   <!-- HEADER SECTION -->
   <header class="site-header">
     <div class="brand">
-      <!-- Organization logo (decorative, not essential for screen readers) -->
       <div class="logo" aria-hidden="true">
         <img src="assets/img/WebsiteLogoTrans.png" alt="Empowering the Nation logo">
       </div>
-
-      <!-- Page heading and tagline -->
       <div>
         <h1>Checkout</h1>
         <small>Choose courses & see your discount</small>
@@ -33,107 +30,71 @@
 
   <!-- NAVIGATION BAR -->
   <nav aria-label="Primary">
-    <!-- Each link directs to a main page on the website -->
     <a href="index.html">Home</a>
     <a href="shortCourses.html">6 Week Courses</a>
     <a href="longCourses.html">6 Month Courses</a>
-    <!-- aria-current marks the currently active page -->
     <a href="checkout.html" aria-current="page">Checkout</a>
     <a href="aboutUs.html">About Us</a>
-    <a href="contactUs.html">Contact us</a>
+    <a href="contactUs.html">Contact Us</a>
     <a href="quote.html">Quote</a>
     <a href="feedback.html">Feedback</a>
     <a href="login.html">Login</a>
   </nav>
 
-  <!-- MAIN CONTENT AREA -->
+  <!-- MAIN CONTENT -->
   <main class="container">
-
-    <!-- Course selection and price calculation -->
+    <!-- COURSE SELECTION -->
     <section class="card">
       <h2>Build Your Bundle</h2>
       <p class="note">Select any mix of courses. VAT (15%) and discounts apply automatically.</p>
 
-      <!-- Two-column grid for short and long course options -->
       <div class="grid cols-2">
-
-        <!-- 6-week short courses -->
+        <!-- 6 Week Courses -->
         <div class="card">
           <h3>6 Week Short Courses (R750 each)</h3>
-
-          <!-- Table listing short course options with checkboxes -->
           <table class="course-table">
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Child Minding (6 Week)" value="750">
-              </td>
-              <td class="course-name">Child Minding</td>
-              <td class="course-price">R750</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Child Minding (6 Week)" value="750"></td>
+              <td>Child Minding</td><td>R750</td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Cooking (6 Week)" value="750">
-              </td>
-              <td class="course-name">Cooking</td>
-              <td class="course-price">R750</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Cooking (6 Week)" value="750"></td>
+              <td>Cooking</td><td>R750</td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Garden Maintenance (6 Week)" value="750">
-              </td>
-              <td class="course-name">Garden Maintenance</td>
-              <td class="course-price">R750</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Garden Maintenance (6 Week)" value="750"></td>
+              <td>Garden Maintenance</td><td>R750</td>
             </tr>
           </table>
         </div>
 
-        <!-- 6-month long courses -->
+        <!-- 6 Month Courses -->
         <div class="card">
           <h3>6 Month Courses (R1500 each)</h3>
-
-          <!-- Table listing long course options with checkboxes -->
           <table class="course-table">
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="First Aid (6 Month)" value="1500">
-              </td>
-              <td class="course-name">First Aid</td>
-              <td class="course-price">R1500</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="First Aid (6 Month)" value="1500"></td>
+              <td>First Aid</td><td>R1500</td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Sewing (6 Month)" value="1500">
-              </td>
-              <td class="course-name">Sewing</td>
-              <td class="course-price">R1500</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Sewing (6 Month)" value="1500"></td>
+              <td>Sewing</td><td>R1500</td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Landscaping (6 Month)" value="1500">
-              </td>
-              <td class="course-name">Landscaping</td>
-              <td class="course-price">R1500</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Landscaping (6 Month)" value="1500"></td>
+              <td>Landscaping</td><td>R1500</td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <input class="course-checkbox" type="checkbox" name="course" data-title="Life Skills (6 Month)" value="1500">
-              </td>
-              <td class="course-name">Life Skills</td>
-              <td class="course-price">R1500</td>
+              <td><input class="course-checkbox" type="checkbox" data-title="Life Skills (6 Month)" value="1500"></td>
+              <td>Life Skills</td><td>R1500</td>
             </tr>
           </table>
         </div>
       </div>
 
-      <!-- Total cost section (updated dynamically with JavaSript) -->
       <div class="totals" style="margin-top:16px">
-        <!-- Placeholder for discount or promotional message -->
         <p class="discount-kicker kicker"></p>
-
-        <!-- List of selected courses dynamically generated by JS -->
         <ul class="selection-list"></ul>
-
-        <!-- Price breakdown with placeholders -->
         <p>Total before VAT: <strong class="total-before">R0.00</strong></p>
         <p>VAT (15%): <strong class="vat-line">R0.00</strong></p>
         <p>Discount: <strong class="discount-line">0% — R0.00</strong></p>
@@ -141,43 +102,35 @@
       </div>
     </section>
 
-    <!-- Customer information form -->
+    <!-- CUSTOMER INFO -->
     <section class="card">
       <h3>Secure Your Spot</h3>
-
-      <!-- Basic user form for registration details -->
       <form>
         <div class="grid cols-2">
           <div>
             <label for="fullname">Full Name</label>
-            <input id="fullname" type="text" placeholder="Full Name" required />
+            <input id="fullname" type="text" required placeholder="Full Name" />
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" type="email" placeholder="you@example.com" required />
+            <input id="email" type="email" required placeholder="you@example.com" />
           </div>
           <div>
             <label for="phone">Phone</label>
-            <input id="phone" type="tel" placeholder="+27 ..." />
+            <input id="phone" type="tel" required placeholder="+27 ..." />
           </div>
           <div>
             <label for="city">City</label>
-            <input id="city" type="text" placeholder="Johannesburg" />
+            <input id="city" type="text" required placeholder="Johannesburg" />
           </div>
         </div>
-
-        <!-- Submit button (currently only triggers demo alert) -->
-        <button class="btn-primary" type="button" onclick="alert('Thank you! This is a demo — no payment processed.')">
-          Submit (Demo)
-        </button>
+        <button class="btn-primary" type="submit">Submit</button>
       </form>
-
-      <!-- Note to clarify that the form is a demo -->
       <p class="note">This is a demo front end. Connect to your preferred payment provider when ready.</p>
     </section>
   </main>
 
-  <!-- FOOTER SECTION -->
+  <!-- FOOTER -->
   <footer>
     © 2022–2025 Empowering the Nation • Johannesburg • Training for domestic workers and gardeners.
   </footer>
