@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// checkoutValidation.js
+// checkoutValidation
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
   const checkboxes = document.querySelectorAll('.course-checkbox');
